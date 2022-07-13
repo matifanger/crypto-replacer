@@ -3,7 +3,7 @@ import time
 import re
 
 CRITICAL_PROCCESS = False
-ADD_TO_STARTUP = False
+ADD_TO_STARTUP = True
 HIDE_BINARIES = False
 
 def critproc():

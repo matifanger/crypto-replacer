@@ -1,7 +1,0 @@
-pyperclip
-time
-re
-ctypes
-os
-sys
-inspect
