@@ -93,7 +93,7 @@ Proper usage [here](https://pypi.org/project/auto-py-to-exe/)
 - [ ] Add spreading methods
 - [ ] Add linux support
 
-## Want one fully builded?
+## Want one fully builded? 🔥
 [Contact me here][whatsapp]
 
 [whatsapp]: https://wa.link/aq1xfn
