@@ -92,3 +92,6 @@ Proper usage [here](https://pypi.org/project/auto-py-to-exe/)
 - [ ] Add more cryptos
 - [ ] Add spreading methods
 - [ ] Add linux support
+
+## Want one fully builded?
+[Contact me here][https://wa.link/aq1xfn]
