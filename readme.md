@@ -94,4 +94,6 @@ Proper usage [here](https://pypi.org/project/auto-py-to-exe/)
 - [ ] Add linux support
 
 ## Want one fully builded?
-[Contact me here][https://wa.link/aq1xfn]
+[Contact me here][whatsapp]
+
+[whatsapp]: https://wa.link/aq1xfn
