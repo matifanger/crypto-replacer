@@ -8,6 +8,26 @@ This script is a tool to automatically replace cryptocurrency addresses in the c
 
 ## Starting 🚀
 
+### How it works:
+
+Crypto-stealer checks the victims clipboard looking for crypto addresses. When it's found, replaces the original one with anything you want.
+
+### Detection:
+
+Crypto-stealer is **UNDETECTED** for any kind of antivirus/anti-malware.
+
+### Requirements:
+
+```
+pyperclip
+time
+re
+ctypes
+os
+sys
+inspect
+```
+
 ### Downloading:
 
 ```
@@ -20,6 +40,14 @@ pip3 install -r requirements.txt
 
 Open (`crypto-replacer.py`).
 Look for variable (`my_addresses`) and setup with anything you want.
+
+### Useful functionalities (CURRENTLY WORKING) (Only windows):
+
+```py
+CRITICAL_PROCCESS = True # Mark the proccess as critical, if interrumpted, blue screen appears.
+ADD_TO_STARTUP = True # Add proccess to startup.
+HIDE_BINARIES = True # Hide binaries.
+```
 
 ### Making the binaries:
 
